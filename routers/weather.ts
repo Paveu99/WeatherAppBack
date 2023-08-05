@@ -11,11 +11,3 @@ weatherRouter
             weatherInPoland
         })
     })
-    .get('/:id', async (req, res) => {
-        const weatherInPoland = await getData()
-        let oneCity = weatherInPoland.filter((item: CityEntity) => item.stacja === req.params.id)[0]
-
-        res.json({
-            oneCity
-        })
-    })
